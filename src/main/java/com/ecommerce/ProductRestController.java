@@ -50,19 +50,19 @@ public class ProductRestController {
 		}
 	}
 	
-	@GetMapping(path="/update/{id}", produces = "application/json")
-	public Object updateproduct(@PathVariable("id") int id,@RequestBody EProduct eProduct){
-		
-		Optional<EProduct> productFromRepo = eProductRepo.findById(id);
-		if (productFromRepo.isPresent()) {
-				eProductRepo.update(eProduct);
-				List<EProduct> products = eProductRepo.findAll();
-				return products;		
-
-		}else {
-			return "Aadhar with id = "+ id + " not found, cannot update";
-		}
-	}
+//	@GetMapping(path="/update/{id}", produces = "application/json")
+//	public Object updateproduct(@PathVariable("id") int id,@RequestBody EProduct eProduct){
+//		
+//		Optional<EProduct> productFromRepo = eProductRepo.findById(id);
+//		if (productFromRepo.isPresent()) {
+//				eProductRepo.update(eProduct);
+//				List<EProduct> products = eProductRepo.findAll();
+//				return products;		
+//
+//		}else {
+//			return "Aadhar with id = "+ id + " not found, cannot update";
+//		}
+//	}
 	//Delete a Product
 	@GetMapping(path="/delete/{id}", produces = "application/json")
 	public Object deleteProduct(@PathVariable("id") int id){

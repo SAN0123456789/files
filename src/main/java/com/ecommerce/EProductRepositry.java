@@ -13,7 +13,7 @@ public interface EProductRepositry extends JpaRepository<EProduct, Integer>, Jpa
 	List<EProduct> findAllByName(String name);
 
 	List<EProduct> findAllByPrice(float price);
-	List<EProduct> update(EProduct epro);
+//	List<EProduct> update(EProduct epro);
 	List<EProduct> findAllByPriceGreaterThan(float price);
 
 	// JPQL queries
